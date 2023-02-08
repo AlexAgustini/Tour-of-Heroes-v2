@@ -1,0 +1,8 @@
+.mat-raised-button {
+  margin-top: 1em;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+}

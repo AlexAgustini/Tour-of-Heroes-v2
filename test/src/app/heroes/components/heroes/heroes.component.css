@@ -1,0 +1,12 @@
+.mat-row:hover {
+  cursor: pointer;
+  background: rgba(232, 232, 232, 0.929) !important;
+}
+
+.add-button {
+  position: absolute;
+  cursor: pointer;
+  right: 2%;
+  top: 13%;
+}
+

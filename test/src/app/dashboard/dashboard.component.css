@@ -1,0 +1,22 @@
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-card {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (width <= 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}

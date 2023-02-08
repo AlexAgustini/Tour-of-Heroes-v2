@@ -1,0 +1,21 @@
+<h1>Dashboard</h1>
+
+<div class="container">
+  <div class="dashboard-content">
+    <mat-card
+      [routerLink]="['/heroes', hero.id]"
+      class="mat-card"
+      *ngFor="let hero of heroes">
+
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+    </mat-card>
+  </div>
+
+  <app-hero-search
+    [label]="'Hero Search'"
+    (selected)="onSelected($event)"
+  >
+
+  </app-hero-search>
+</div>
+

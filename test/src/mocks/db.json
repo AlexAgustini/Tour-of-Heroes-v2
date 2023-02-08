@@ -1,0 +1,32 @@
+{
+  "heroes": [
+    {
+      "name": "Batman",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Flash"
+    },
+    {
+      "name": "Iron-man",
+      "id": 4
+    },
+    {
+      "name": "Wonder-woman",
+      "id": 5
+    },
+    {
+      "name": "Spider-man",
+      "id": 6
+    },
+    {
+      "name": "Wolverine",
+      "id": 7
+    },
+    {
+      "name": "Hawkeye",
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<h1>My heroes</h1>
+
+<button class="add-button" color="accent" mat-fab routerLink="new">
+  <mat-icon>add</mat-icon>
+</button>
+
+<app-hero-search
+  [label]="'Hero to delete'"
+  (selected)="onSelected($event)"
+  >
+</app-hero-search>
+
+<table mat-table class="mat-elevation-z8" [dataSource]="heroes">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let row">
+      <button (click)="$event.stopPropagation(); delete(row)" mat-icon-button matTooltip="Delete this item">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr class="mat-row" mat-row [routerLink]="['/heroes', row.id]" *matRowDef="let row; columns: displayedColumns"></tr>
+
+</table>
+
